@@ -1,0 +1,13 @@
+server:
+  port: 7777
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+  #   pub-sub-domain 默认为false 就是为队列 为true 就是为主题
+  jms:
+    pub-sub-domain: false
+
+myQueue: queue1
+
