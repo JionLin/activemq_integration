@@ -1,0 +1,15 @@
+server:
+  port: 8889
+spring:
+  activemq:
+#    broker-url: tcp://localhost:61616 使用默认的tcp 功能
+#    broker-url: nio://localhost:61618 在配置文件里面添加nio配置,会更好,相对tcp协议来说
+    broker-url: nio://localhost:61608 # 使用自动的形式,支持nio模型,又支持多种协议 tcp nio ssl ws amqp stomp 协议
+    user: admin
+    password: admin
+#   pub-sub-domain 默认为false 就是为队列 为true 就是为主题
+  jms:
+    pub-sub-domain: true
+
+myTopic: topic1
+
